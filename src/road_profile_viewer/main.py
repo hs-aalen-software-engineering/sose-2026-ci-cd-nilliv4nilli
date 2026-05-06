@@ -10,7 +10,7 @@ using an interactive Dash interface.
 from road_profile_viewer.visualization import create_dash_app
 
 
-def main():
+def main():  # pyright: ignore[reportRedeclaration]
     """
     Main function to run the Dash application.
     """

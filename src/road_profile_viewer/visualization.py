@@ -72,9 +72,7 @@ def create_dash_app() -> Dash:
                     html.Li("The red point at (0, 2.0) represents the camera position"),
                     html.Li("The blue line shows the camera ray at the specified angle"),
                     html.Li("The green point shows where the ray intersects the road"),
-                    html.Li(
-                        "Hover over the green point to see the distance from camera to intersection"
-                    ),
+                    html.Li("Hover over the green point to see the distance from camera to intersection"),
                     html.Li("Adjust the angle to see how the intersection point changes"),
                     html.Li("Negative angles point downward, positive angles point upward"),
                 ]),
@@ -120,9 +118,7 @@ def create_dash_app() -> Dash:
         camera_x, camera_y = 0, 2.0
 
         # Find intersection first to determine ray length
-        x_intersect, y_intersect, distance = find_intersection(
-            x_road, y_road, angle, camera_x, camera_y
-        )
+        x_intersect, y_intersect, distance = find_intersection(x_road, y_road, angle, camera_x, camera_y)
 
         # Calculate adaptive ray line based on intersection
         if x_intersect is not None:
@@ -204,10 +200,7 @@ def create_dash_app() -> Dash:
                     hovertemplate=hover_text,
                 )
             )
-            info_text = (
-                f"Intersection found at ({x_intersect:.2f}, {y_intersect:.2f}) | "
-                f"Distance: {distance:.2f} units"
-            )
+            info_text = f"Intersection found at ({x_intersect:.2f}, {y_intersect:.2f}) | Distance: {distance:.2f} units"
         else:
             info_text = "No intersection found with current angle"
 

@@ -130,9 +130,7 @@ def find_intersection(
             y_intersect = y1 + t * (y2 - y1)
 
             # Calculate distance from camera to intersection
-            distance = np.sqrt(
-                (x_intersect - camera_x) ** 2 + (y_intersect - camera_y) ** 2
-            )
+            distance = np.sqrt((x_intersect - camera_x) ** 2 + (y_intersect - camera_y) ** 2)
 
             return x_intersect, y_intersect, distance
 
